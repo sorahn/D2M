@@ -1,0 +1,43 @@
+{
+  "name": "d2m",
+  "version": "0.1.0",
+  "private": true,
+  "contributors": [
+    {
+      "name": "Daryl Roberts",
+      "email": "daryl.roberts@gmail.com",
+      "github": "https://github.com/sorahn"
+    }
+  ],
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "import-sort-cli": "^3.3.0",
+    "import-sort-parser-babylon": "^3.2.0",
+    "import-sort-style-module": "^3.0.0",
+    "lint-staged": "^4.2.3",
+    "prettier": "^1.7.2"
+  },
+  "importSort": {
+    ".js": {
+      "style": "module"
+    }
+  },
+  "lint-staged": {
+    "{**/*,*}.{js,jsx,json}": ["yarn format", "git add"]
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "format": "prettier --trailing-comma es5 --write",
+    "lint": "eslint src",
+    "precommit": "yarn lint && yarn sort-imports && lint-staged",
+    "sort-imports": "import-sort -o src",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom",
+    "test:ci": "CI=true yarn test"
+  }
+}
