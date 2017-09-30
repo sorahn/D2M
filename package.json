@@ -28,7 +28,7 @@
     }
   },
   "lint-staged": {
-    "{**/*,*}.{js,jsx,json}": ["yarn format", "git add"]
+    "*.{js,jsx,json}": ["yarn format", "git add"]
   },
   "scripts": {
     "build": "react-scripts build",
