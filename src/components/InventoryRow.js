@@ -10,7 +10,7 @@ import UnequippedGrid from "../primatives/UnequippedGrid";
 class InventoryRow extends React.PureComponent {
   render() {
     return (
-      <div>
+      <section>
         <InventoryTitle>{this.props.title}</InventoryTitle>
         <InventorySection>
           <ItemLarge
@@ -23,7 +23,7 @@ class InventoryRow extends React.PureComponent {
             ))}
           </UnequippedGrid>
         </InventorySection>
-      </div>
+      </section>
     );
   }
 

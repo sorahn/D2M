@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export default styled.section`
-  display: inline-flex;
+export default styled.div`
+  display: flex;
   flex-wrap: wrap;
   margin-bottom: 10px;
 `;
